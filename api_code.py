@@ -5,7 +5,7 @@ import os
 # API key
 config = configparser.ConfigParser()
 config.read('config.ini')
-api_key = config['OpenWeatherMap']['api_key']
+api_key = config.get('OpenWeatherMap', 'api_key')
 cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix']
 
 # Initialize an empty list to store weather data for each city
